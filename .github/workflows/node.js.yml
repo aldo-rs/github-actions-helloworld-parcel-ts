@@ -34,4 +34,5 @@ jobs:
       - name: Deploy on GitHubPages with secret
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist
+          folder: ./dist
+          token: ${{ secrets.GH_PAT }}
