@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "github-actions-helloworld-parcel-ts",
   "source": "src/index.html",
   "type": "module",
   "scripts": {
