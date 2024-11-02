@@ -13,7 +13,6 @@ jobs:
     strategy:
       matrix:
         node-version: [22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - uses: actions/checkout@v4
@@ -32,7 +31,8 @@ jobs:
         run: |
           npm run lint
       - name: Deploy on GitHubPages with secret
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4 # a custom action
         with:
-          folder: ./dist
-          token: ${{ secrets.GH_PAT }}
+          folder: ./dist # The folder in your repository that you want to deploy
+          token: ${{ secrets.GH_PAT }} # token to access to the repository and push dist content to gh-pages branch
+          branch: gh-pages # default value
